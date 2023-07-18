@@ -30,8 +30,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: "Install dependencies"
-      run: npm i -g pnpm
-      run: pnpm ci
-      run: pnpm run build --if-present
-      run: pnpm test
+    - run: npm i -g pnpm
+    - run: pnpm ci
+    - run: pnpm run build --if-present
+    - run: pnpm test
